@@ -90,3 +90,13 @@ h2 {
   --ifm-footer-background-color: #FC9A00;
   --ifm-footer-color: #000;
 }
+
+.footer__copyright a {
+  color: #FFF;
+}
+
+.footer__copyright img {
+  height: 1.5rem;
+  position: relative;
+  top: 4px;
+}

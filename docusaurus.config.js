@@ -71,7 +71,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} MageQuest. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} MageQuest. Supported by <a href="https://www.fisheye.co.uk/"><img src="/img/fisheye-logo.png" alt="Fisheye"/></a>`,
       },
       prism: {
         theme: lightCodeTheme,
