@@ -7,14 +7,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'MageQuest',
-  tagline: 'Open Source Magento 2 Learning, Resources & Tools',
+  tagline: 'Open Source Magento 2 Learning, Resources & Tools.',
   url: 'https://magequest.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo-small.png',
-  organizationName: 'MageQuest', // Usually your GitHub org/user name.
-  projectName: 'magequest', // Usually your repo name.
+  organizationName: 'MageQuest',
+  projectName: 'magequest',
 
   presets: [
     [
@@ -22,10 +22,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'quests',
-          routeBasePath: 'quests',
+          path: 'docs',
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl:
               'https://github.com/magequest/magequest/edit/main/',
         },
@@ -34,7 +33,6 @@ const config = {
           blogDescription: 'Blog',
           routeBasePath: 'blog',
           showReadingTime: true,
-          // Please change this to your repo.
           editUrl:
               'https://github.com/magequest/magequest/edit/main/blog/',
         },
@@ -57,11 +55,32 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'quests/intro',
             position: 'left',
             label: 'Quests',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'doc',
+            docId: 'about/intro',
+            position: 'left',
+            label: 'About',
+          },
+          {
+            type: 'doc',
+            docId: 'resources/intro',
+            position: 'left',
+            label: 'Resources',
+          },
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left'
+          },
+          {
+            to: '/sponsor',
+            label: 'Sponsor',
+            position: 'right',
+          },
           {
             href: 'https://github.com/magequest/magequest',
             label: 'GitHub',
@@ -76,6 +95,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ['php'],
       },
     }),
 };

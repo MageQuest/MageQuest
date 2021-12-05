@@ -6,7 +6,7 @@
 
 import React from 'react';
 import type {Props} from '@theme/IconExternalLink';
-import Open from "pixelarticons/svg/open.svg";
+import Open from 'pixelarticons/svg/open.svg';
 import styles from './styles.module.css';
 
 const IconExternalLink = ({

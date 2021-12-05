@@ -1,45 +1,59 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './HomepageFeatures.module.css';
+import ArrowUp from 'pixelarticons/svg/arrow-up.svg';
+import Code from 'pixelarticons/svg/code.svg';
+import BookOpen from 'pixelarticons/svg/book-open.svg';
+const imageWidth = 64;
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Level Up!',
+    image: <ArrowUp width={imageWidth}/>,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        MageQuest's main goal is provide learning resources to help improve your Magento 2 knowledge through simple, yet thorough tutorials.
       </>
     ),
+    link: '/quests',
+    linkTitle: 'Get Started Now'
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Open Source',
+    image: <Code width={imageWidth}/>,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+          MageQuest's content is free to all, as we believe in lowering the barrier to entry for beginners to the Magento ecosystem.
       </>
     ),
+    link: 'https://github.com/magequest/magequest',
+    linkTitle: 'Contribute Or Sponsor'
   },
   {
-    title: 'Powered by React',
+    title: 'Tools & Resources',
+    image: <BookOpen width={imageWidth}/>,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        As well as learning material, MageQuest also provides useful Magento 2 extensions, tools and links to other great resources.
       </>
     ),
+    link: '/resources',
+    linkTitle: 'Show Me More'
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({image, title, description, link, linkTitle}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
+      <div className={clsx(styles.image, 'text--center')}>
+          {image}
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
+        <button>
+            <a href={link}>{linkTitle}</a>
+        </button>
       </div>
     </div>
   );

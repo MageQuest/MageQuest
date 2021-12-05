@@ -1,9 +1,6 @@
 ---
-id: intro
-title: Introduction
-sidebar_label: Intro
-sidebar_position: 1
-slug: /
+id: style-guide
+title: Style Guide
 ---
 
 You can write content using [GitHub-flavored Markdown syntax](https://github.github.com/gfm/).
@@ -91,20 +88,26 @@ Reference-style: ![alt text][logo]
 
 Images from any folder can be used by providing path to file. Path should be relative to markdown file.
 
-![img](../static/img/logo.png)
+![img](../../static/img/logo-small.png)
 
 ---
 
 ## Code
+
+```php
+$s = "PHP syntax highlighting";
+echo $s;
+```
 
 ```javascript
 var s = 'JavaScript syntax highlighting';
 alert(s);
 ```
 
-```python
-s = "Python syntax highlighting"
-print(s)
+```xml
+<items>
+   <item xsi:type="string">XML syntax highlighting</item>
+</items>
 ```
 
 ```

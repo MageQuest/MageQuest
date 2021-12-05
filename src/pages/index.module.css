@@ -3,8 +3,12 @@
  * and scoped locally.
  */
 
+.heroBanner, .main {
+  background-color: var(--ifm-background-color);
+}
+
 .heroBanner {
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -14,6 +18,14 @@
   .heroBanner {
     padding: 2rem;
   }
+}
+
+.heroLogo {
+  padding-bottom: 2rem;
+}
+
+.heroTitle {
+  color: var(--ifm-color-primary);
 }
 
 .buttons {
