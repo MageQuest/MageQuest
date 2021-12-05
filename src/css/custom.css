@@ -41,7 +41,7 @@ h2 {
   border-bottom: 1px solid var(--ifm-color-primary);
 }
 
-button {
+.btn {
   background-color: var(--ifm-color-primary);
   font-family: 'Press Start 2P';
   font-size: 0.8rem;
@@ -52,12 +52,12 @@ button {
   border-radius: 5px;
 }
 
-button a,
-button a:hover {
+.btn a,
+.btn a:hover {
   color: #FFF;
 }
 
-html[data-theme='dark'] button {
+html[data-theme='dark'] .btn {
   border-right: 2px solid #FFF;
   border-bottom: 2px solid #FFF;
 }
@@ -143,14 +143,30 @@ pre + button,
 }
 
 code span {
-  font-weight: 600;
+  font-weight: 500;
+  background-color: #FFF;
+  border-radius: 2px;
+}
+
+span.token-line {
+  padding: 0.1rem 0.5rem;
+}
+
+html[data-theme='dark'] code span {
+  background-color: rgba(0,0,0,0.1);
 }
 
 .docusaurus-highlight-code-line {
-  background-color: var(--ifm-color-primary);
+  background-color: #FF0;
   display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: #F00;
+}
+
+.docusaurus-highlight-code-line span {
+  background-color: transparent;
 }
 
 pre + button {

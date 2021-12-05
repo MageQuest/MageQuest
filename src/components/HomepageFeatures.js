@@ -51,7 +51,7 @@ function Feature({image, title, description, link, linkTitle}) {
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
-        <button>
+        <button className={clsx('btn')}>
             <a href={link}>{linkTitle}</a>
         </button>
       </div>
