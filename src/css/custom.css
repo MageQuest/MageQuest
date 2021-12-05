@@ -58,7 +58,6 @@ button a:hover {
 }
 
 html[data-theme='dark'] button {
-
   border-right: 2px solid #FFF;
   border-bottom: 2px solid #FFF;
 }
@@ -164,6 +163,10 @@ pre + button {
 
 .pagination-nav__item > a:hover {
   border-color: #000;
+}
+
+html[data-theme='dark'] .pagination-nav__item > a:hover {
+  border-color: #FFF;
 }
 
 .footer, .footer--dark {
