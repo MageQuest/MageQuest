@@ -16,7 +16,8 @@ const FeatureList = [
       </>
     ),
     link: '/quests',
-    linkTitle: 'Get Started Now'
+    linkTitle: 'Get Started Now',
+    linkTarget: '_self',
   },
   {
     title: 'Open Source',
@@ -27,7 +28,8 @@ const FeatureList = [
       </>
     ),
     link: 'https://github.com/magequest/magequest',
-    linkTitle: 'Contribute Or Sponsor'
+    linkTitle: 'Contribute Or Sponsor',
+    linkTarget: '_blank',
   },
   {
     title: 'Tools & Resources',
@@ -38,11 +40,12 @@ const FeatureList = [
       </>
     ),
     link: '/resources',
-    linkTitle: 'Show Me More'
+    linkTitle: 'Show Me More',
+    linkTarget: '_self',
   },
 ];
 
-function Feature({image, title, description, link, linkTitle}) {
+function Feature({image, title, description, link, linkTitle, linkTarget}) {
   return (
     <div className={clsx('col col--4')}>
       <div className={clsx(styles.image, 'text--center')}>
@@ -52,7 +55,7 @@ function Feature({image, title, description, link, linkTitle}) {
         <h3>{title}</h3>
         <p>{description}</p>
         <button className={clsx('btn')}>
-            <a href={link}>{linkTitle}</a>
+            <a href={link} target={linkTarget}>{linkTitle}</a>
         </button>
       </div>
     </div>
